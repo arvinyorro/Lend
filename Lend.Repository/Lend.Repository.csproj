@@ -49,17 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LendContext.cs" />
-    <Compile Include="Migrations\201404131309053_InitialCreate.cs" />
-    <Compile Include="Migrations\201404131309053_InitialCreate.Designer.cs">
-      <DependentUpon>201404131309053_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201404171027441_AddExpensesAndInstallments.cs" />
-    <Compile Include="Migrations\201404171027441_AddExpensesAndInstallments.Designer.cs">
-      <DependentUpon>201404171027441_AddExpensesAndInstallments.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201404171059345_UpdateInstallment.cs" />
-    <Compile Include="Migrations\201404171059345_UpdateInstallment.Designer.cs">
-      <DependentUpon>201404171059345_UpdateInstallment.cs</DependentUpon>
+    <Compile Include="Mapping\ExpenseMap.cs" />
+    <Compile Include="Mapping\InstallmentMap.cs" />
+    <Compile Include="Mapping\LoanMap.cs" />
+    <Compile Include="Mapping\BorrowerMap.cs" />
+    <Compile Include="Migrations\201404181433284_InitialCreate.cs" />
+    <Compile Include="Migrations\201404181433284_InitialCreate.Designer.cs">
+      <DependentUpon>201404181433284_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,14 +71,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201404131309053_InitialCreate.resx">
-      <DependentUpon>201404131309053_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201404171027441_AddExpensesAndInstallments.resx">
-      <DependentUpon>201404171027441_AddExpensesAndInstallments.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201404171059345_UpdateInstallment.resx">
-      <DependentUpon>201404171059345_UpdateInstallment.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201404181433284_InitialCreate.resx">
+      <DependentUpon>201404181433284_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

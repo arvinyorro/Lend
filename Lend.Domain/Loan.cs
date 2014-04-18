@@ -23,7 +23,7 @@ namespace Lend.Domain
             this.Expense = expense;
 
             this.Interest = amount * this.interestRate;
-            this.TotalPayment = amount + this.Interest;
+            this.AmountPayment = amount + this.Interest;
 
             this.CreateInstallments(installmentsCount);
         }
@@ -31,7 +31,7 @@ namespace Lend.Domain
         private void CreateInstallments(int installmentsCount)
         {
             this.Installments = new List<Installment>();
-            decimal installmentAmount = this.TotalPayment / installmentsCount;
+            decimal installmentAmount = this.AmountPayment / installmentsCount;
             DateTime dueDate = DateTime.Now;
             for (int x = 1; x <= installmentsCount; x++)
             {
@@ -45,7 +45,7 @@ namespace Lend.Domain
         public int ID { get; set; }
         public decimal AmountBorrowed { get; set; }
         public decimal Interest { get; set; }
-        public decimal TotalPayment { get; set; }
+        public decimal AmountPayment { get; set; }
         public bool Paid { get; set; }
         public DateTime BorrowedDateTime { get; set; }
         public virtual Borrower Borrower { get; set; }

@@ -12,11 +12,11 @@ namespace Lend.Domain
         public Expense(decimal amount)
         {
             this.Amount = amount;
-            this.ReleasedDateTime = DateTime.Now;
+            this.AddedDateTIme = DateTime.Now;
         }
 
         public int ID { get; set; }
         public decimal Amount { get; set; }
-        public DateTime ReleasedDateTime { get; set; }
+        public DateTime AddedDateTIme { get; set; }
     }
 }

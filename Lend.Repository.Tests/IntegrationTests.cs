@@ -102,7 +102,7 @@ namespace Lend.Repository.Tests
             Assert.AreEqual(testLoan, updatedLoan);
             Assert.AreEqual(InstallmentCount, updatedLoan.Installments.Count);
             Assert.AreEqual(LoanAmount, updatedLoan.AmountBorrowed);
-            Assert.AreEqual(TotalPayment, updatedLoan.TotalPayment);
+            Assert.AreEqual(TotalPayment, updatedLoan.AmountPayment);
             Assert.AreEqual(testBorrower, updatedLoan.Borrower);
             Assert.AreEqual(InstallmentPayment, updatedLoan.Installments.First().Payment);
         }
