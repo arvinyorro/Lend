@@ -34,7 +34,6 @@ namespace Lend.Repository.Tests
         private const decimal TotalPayment = LoanAmount + Interest;
         private const decimal InstallmentPayment = TotalPayment / InstallmentCount;
 
-
         private LendContext dbContext;
         private TransactionScope transactionScope;
 
