@@ -15,12 +15,13 @@ namespace Lend.Console
         {
             using(var db = new LendContext())
             {
-                var borrower = new Borrower("Michael", "Yorro");
-                db.Borrowers.Add(borrower);
-                db.SaveChanges();
-
                 var query = from x in db.Borrowers
                             select x;
+
+                if (query.Count() == 0)
+                {
+                    System.Console.WriteLine("No borrowers");
+                }
 
                 foreach (var x in query)
                 {
